@@ -4,6 +4,7 @@ Welcome! This repository was designed to automate the deploy of a single VM from
 
 ## Tree
 
+```bash
 ├── README.md
 ├── main.tf
 ├── output.tf
@@ -14,6 +15,22 @@ Welcome! This repository was designed to automate the deploy of a single VM from
 ├── terraform.tfvars
 ├── variables.tf
 └── vars.auto.tfvars
+```
+
+This project follows the directory structure:
+
+- `README.md`: Project documentation.
+- `main.tf`: Main Terraform configuration file.
+- `output.tf`: Terraform output configuration file.
+- `templates/`: Directory containing metadata and userdata YAML templates.
+  - `metadata.yaml`: Metadata YAML template.
+  - `userdata.yaml`: Userdata YAML template.
+- `terraform.tfstate`: Terraform state file.
+- `terraform.tfvars`: Terraform variable values.
+- `variables.tf`: Terraform variable definitions.
+- `vars.auto.tfvars`: Auto-generated Terraform variable values.
+
+
 
 ## Table of Contents
 - [Getting Started](#getting-started)
