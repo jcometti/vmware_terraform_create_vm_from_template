@@ -1,6 +1,6 @@
 # Deploy a Virtual Machine from Template in vSphere 8.0
 
-Welcome to the GitHub repository housing a set of solutions designed to automate the creation of a single VM from a template in vCenter 8.0.
+Welcome! This repository was designed to automate the deploy of a single VM from a template in vCenter 8.0 using Terraform. 
 
 ## Table of Contents
 - [Getting Started](#getting-started)
