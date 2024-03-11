@@ -2,6 +2,19 @@
 
 Welcome! This repository was designed to automate the deploy of a single VM from a template in vCenter 8.0 using Terraform. 
 
+## Tree
+
+├── README.md
+├── main.tf
+├── output.tf
+├── templates
+│   ├── metadata.yaml
+│   └── userdata.yaml
+├── terraform.tfstate
+├── terraform.tfvars
+├── variables.tf
+└── vars.auto.tfvars
+
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
