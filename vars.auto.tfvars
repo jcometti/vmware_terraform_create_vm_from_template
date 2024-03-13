@@ -1,4 +1,4 @@
-cpu                    = 4
+cpu                    = 2
 cores-per-socket       = 1
 ram                    = 4096
 disksize               = 100 # in GB
@@ -15,3 +15,14 @@ ipv4_address           = "192.168.1.120"
 ipv4_gateway           = "192.168.1.48"
 ipv4_netmask           = "24"
 vm-template-name       = "Ubuntu-2204-Template-100GB-Thin"
+
+vms = {
+  lab-k8s-test_01 = {
+    name         = "lab-k8s-w01"
+    ipv4_address = "192.168.1.121"
+  },
+  lab-k8s-test_02 = {
+    name         = "lab-k8s-w02"
+    ipv4_address = "192.168.1.22"
+  }
+}

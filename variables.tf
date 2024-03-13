@@ -2,6 +2,10 @@
 # VMware vCenter connection #
 #===========================#
 
+variable "vms" {
+  type        = map(any)
+  description = "List of virtual machines to be deployed"
+}
 variable "vsphere_user" {
   type        = string
   description = "VMware vSphere user name"

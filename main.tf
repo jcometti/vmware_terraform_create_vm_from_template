@@ -44,6 +44,7 @@ data "vsphere_compute_cluster" "cluster" {
 data "vsphere_network" "network" {
   name          = var.vm-network
   datacenter_id = data.vsphere_datacenter.dc.id
+
 }
 
 data "vsphere_virtual_machine" "template" {
@@ -52,18 +53,22 @@ data "vsphere_virtual_machine" "template" {
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name             = var.name
+  for_each = var.vms
+
+  # name             = var.name
+  name             = each.value.name
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
+
 
   num_cpus             = var.cpu
   num_cores_per_socket = var.cores-per-socket
   memory               = var.ram
   guest_id             = var.vm-guest-id
-
   network_interface {
     network_id   = data.vsphere_network.network.id
     adapter_type = data.vsphere_virtual_machine.template.network_interface_types[0]
+
   }
 
   disk {
